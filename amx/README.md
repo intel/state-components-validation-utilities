@@ -16,7 +16,8 @@ It will be checked if the result is correct or not.
 
 - How to build:  
 
-    gcc 11.1 or above is required.  
+    gcc 11.1 or above is required for instruction TDPBF16PS, TDPBSSD, TDPBSUD, TDPBUSD, TDPBUUD.
+    gcc 13.1 or above is required for instruction TDPFP16PS.
 
     To compile,  
     $ make
@@ -46,4 +47,7 @@ It will be checked if the result is correct or not.
 
     f. Break sub-thread which is doing TMUL TDPBUUD calculation by futex  
     $ ./tmul -b 5 -t 10 -c 20 -i 4
+
+    g. Break sub-thread which is doing TMUL TDPFP16PS calculation by yield
+    $ ./tmul -b 1 -t 10 -c 20 -i 5
 
